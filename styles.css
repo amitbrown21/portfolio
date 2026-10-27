@@ -825,54 +825,6 @@ p { margin: 0; }
   background: #14110C;
 }
 
-/* ---- also built ---- */
-.also {
-  padding-top: clamp(90px, 12vh, 150px);
-}
-
-.also-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 clamp(40px, 6vw, 96px);
-}
-.also-grid li {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--hairline);
-}
-.also-grid a {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-size: 1.18rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.also-grid a:hover { color: var(--vermilion); }
-.also-grid a .ic--ext { align-self: center; }
-.also-lang {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  padding: 2px 8px;
-  vertical-align: 2px;
-}
-.also-grid p {
-  color: var(--ink-3);
-  font-size: 0.88rem;
-  margin-top: 5px;
-  max-width: 46ch;
-}
-
 /* ---- resume ---- */
 .resume {
   padding-top: clamp(90px, 12vh, 150px);
@@ -917,6 +869,62 @@ p { margin: 0; }
   flex-wrap: wrap;
   gap: 16px;
 }
+
+/* ---- experience ---- */
+.experience {
+  margin-bottom: 34px;
+}
+.experience h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+.job {
+  border-top: 1px solid var(--hairline);
+  padding: 18px 0 14px;
+}
+.job-head h4 {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.job-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+.job-org { color: var(--ink-2); font-weight: 500; }
+.job-dates { font-variant-numeric: tabular-nums; }
+
+.job-points {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.job-points li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 7px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.job-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vermilion-bright);
+}
+.job .stack { margin: 10px 0 0; }
 
 .resume-skills h3 {
   font-size: 1.4rem;
