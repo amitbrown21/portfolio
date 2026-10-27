@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: amit-brounstine-portfolio
+    runtime: static
+    repo: https://github.com/amitbrown21/portfolio
+    branch: main
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /assets/img/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /assets/fonts/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
